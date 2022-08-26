@@ -1,9 +1,15 @@
+import Topbar from "../components/Topbar";
+import Header from "../components/Header";
+
 export default function NewPost() {
   return (
+    <>
+    <Topbar/>
+    <Header/>
     <div className="write">
       <img
         className="writeImg"
-        src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        src="x"
         alt=""
       />
       <form className="writeForm">
@@ -32,4 +38,5 @@ export default function NewPost() {
         </button>
       </form>
     </div>
+    </>
   )};

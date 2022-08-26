@@ -5,9 +5,9 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
+        <span className="sidebarTitle">About Me</span>
         <img
-          src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg"
+          src=""
           alt=""
         />
         <p>
@@ -16,42 +16,17 @@ export default function Sidebar() {
         </p>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
+        <span className="sidebarTitle">Categories</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">
             <Link className="link" to="/post/:id">
               Life
             </Link>
           </li>
-          <li className="sidebarListItem">
-            <Link className="link" to="/post/:id">
-              Music
-            </Link>
-          </li>
-          <li className="sidebarListItem">
-            <Link className="link" to="/post/:id">
-              Sport
-            </Link>
-          </li>
-          <li className="sidebarListItem">
-            <Link className="link" to="/post/:id">
-              Style
-            </Link>
-          </li>
-          <li className="sidebarListItem">
-            <Link className="link" to="/post/:id">
-              Tech
-            </Link>
-          </li>
-          <li className="sidebarListItem">
-            <Link className="link" to="/post/:id">
-              Cinema
-            </Link>
-          </li>
         </ul>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle">FOLLOW US</span>
+        <span className="sidebarTitle">Follow Us</span>
         <div className="sidebarSocial">
           <i className="sidebarIcon fab fa-facebook-square"></i>
           <i className="sidebarIcon fab fa-instagram-square"></i>

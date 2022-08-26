@@ -1,4 +1,4 @@
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 export default function Post({img}) {
@@ -9,7 +9,6 @@ export default function Post({img}) {
         src={img}
         alt=""
       />
-      <Router>
       <div className="postInfo">
         <div className="postCats">
           <span className="postCat">
@@ -31,7 +30,6 @@ export default function Post({img}) {
         <hr />
         <span className="postDate">1 hour ago</span>
       </div>
-      </Router>
       <p className="postDesc">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
         officia architecto deserunt deleniti? Labore ipsum aspernatur magnam

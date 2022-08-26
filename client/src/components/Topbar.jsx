@@ -6,23 +6,19 @@ import { Link } from "react-router-dom";
 function Topbar() {
   const user = true;
   return (
-    <div className="top">
+    <div className="topbar">
 
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem">
-            <Link className="link" to="/">
-              Home
-            </Link>
-          </li>
-          <li className="topListItem">About</li>
-          <li className="topListItem">Contact</li>
-          <li className="topListItem">
-            <Link className="link" to="/add-post">
-              Add Post
-            </Link>
-          </li>
-          {user && <li className="topListItem">Logout</li>}
+            <li className="topListItem">
+              <Link className="link" to="/">Home</Link>
+            </li>
+            <li className="topListItem">About</li>
+            <li className="topListItem">Contact</li>
+            <li className="topListItem">
+              <Link className="link" to="/add-post">Add Post</Link>
+            </li>
+            {user && <li className="topListItem">Logout</li>}
         </ul>
       </div>
       <div className="topRight">

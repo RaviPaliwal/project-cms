@@ -1,7 +1,14 @@
+import Header from "../components/Header";
+import Topbar from "../components/Topbar"
 import Sidebar from "../components/Sidebar";
+
 
 export default function Settings() {
   return (
+    
+    <>
+    <Topbar/>
+    <Header/>
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
@@ -26,9 +33,9 @@ export default function Settings() {
             />
           </div>
           <label>Username</label>
-          <input type="text" placeholder="Dev" name="name" />
+          <input type="text" placeholder="Username" name="name" />
           <label>Email</label>
-          <input type="email" placeholder="" name="email" />
+          <input type="email" placeholder="Your email" name="email" />
           <label>Password</label>
           <input type="password" placeholder="Password" name="password" />
           <button className="settingsSubmitButton" type="submit">
@@ -38,4 +45,5 @@ export default function Settings() {
       </div>
       <Sidebar />
     </div>
+    </>
   )};

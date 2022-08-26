@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
+
+//CSS
 import "../App.css";
+
+//Components
 
 export default function SinglePost() {
   return (
@@ -22,7 +26,7 @@ export default function SinglePost() {
             Author:
             <b className="singlePostAuthor">
               <Link className="link" to="/post/:id">
-                Safak
+                Post Author
               </Link>
             </b>
           </span>
