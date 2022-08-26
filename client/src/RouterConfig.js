@@ -10,10 +10,9 @@ import NewPost from "./pages/NewPost";
 
 //Function from Routes
 
-export default function routerConfig () {
+export default function RouterConfig () {
   return (
     <BrowserRouter>
-
       <Routes>
           <Route index element={<Home/>}/>
           <Route path="posts" element= {<Home />} />

@@ -1,14 +1,13 @@
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-import Topbar from './components/Topbar';
-import RouterConfig from './RouterConfig';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render (
-    
-    <>
-    <Topbar/>
-    <RouterConfig/>
-    </>
-    
+
+root.render (    
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
+
 );
