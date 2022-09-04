@@ -1,12 +1,6 @@
-import Topbar from "../components/Topbar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
 export default function NewPost() {
   return (
     <>
-    <Topbar/>
-    <Header/>
     <div className="content">
     <div className="write">
       <img
@@ -41,6 +35,5 @@ export default function NewPost() {
       </form>
     </div>
     </div>
-    <Footer/>
     </>
   )};

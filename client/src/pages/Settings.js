@@ -1,14 +1,9 @@
-import Header from "../components/Header";
-import Topbar from "../components/Topbar"
 import Sidebar from "../components/Sidebar";
 
 
 export default function Settings() {
   return (
-    
     <>
-    <Topbar/>
-    <Header/>
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">

@@ -1,11 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
+import Topbar from "./components/Topbar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-//components
-
-
-//pages
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -15,10 +14,12 @@ import NewPost from "./pages/NewPost";
 
 
 
-function App () {
+export default function App () {
     const currentUser = true;
     return (
-      
+          <>
+          <Topbar/>
+          <Header />
           <Routes>
             <Route index element={<Home/>}/>
             <Route path="posts" element= {<Home />} />
@@ -28,8 +29,7 @@ function App () {
             <Route path="/add-post" element = {<NewPost />}/>
             <Route path="settings" element= {<Settings />}/>
          </Routes>
-      
+         <Footer/>
+         </>     
   );
 }
-
-export default App;
