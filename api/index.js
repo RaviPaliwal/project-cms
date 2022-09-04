@@ -45,7 +45,7 @@ const storage = multer.diskStorage({
 }); 
 */
 
-//port 500 configured
+//port 5000 configured
 
 app.use("/auth", authRoute);
 app.use("/users", userRoute);
