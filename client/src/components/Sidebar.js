@@ -6,7 +6,7 @@ export default function Sidebar() {
     <div className="content">
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">About Me</span>
+        <span className="sidebarTitle">Sidebar</span>
         <img
           src=""
           alt=""

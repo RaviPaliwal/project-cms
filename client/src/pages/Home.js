@@ -1,19 +1,27 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
-// import { useLocation } from "react-router";
 import Posts from "../components/Posts";
 import Sidebar from "../components/Sidebar";
-
 import "../App.css";
+import axios from "axios";
 
 
 export default function Home() {
-      //const location = useLocation();
-      //console.log(location);
+  const [posts,setPosts] = useState([]);
+
+  useEffect(()=>{
+    const fetchPosts = async () => {
+      const res = await axios.get('/posts/')
+      setPosts(res.data)
+    }
+    fetchPosts();
+  },[])
+  
       return (
         <>
             <div className="home">
-                <Posts />
+                <Posts posts ={posts}/>
                 <Sidebar />
             </div>
         </>

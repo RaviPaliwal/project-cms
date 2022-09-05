@@ -1,40 +1,24 @@
 import { Link } from "react-router-dom";
 import "../App.css";
 
-export default function Post({img}) {
+export default function Post() {
   return (
     <div className="post">
-      <img
-        className="postImg"
-        src={img}
-        alt=""
-      />
+      <img className="postImg"
+        src="" alt="" />
       <div className="postInfo">
         <div className="postCats">
           <span className="postCat">
             <Link className="link" to="/post/:id">
-              Music
-            </Link>
-          </span>
-          <span className="postCat">
-            <Link className="link" to="/post/:id">
-              Life
+              Category
             </Link>
           </span>
         </div>
-        <span className="postTitle">
-          <Link to="/post/:id" className="link">
-            Lorem ipsum dolor sit amet
-          </Link>
-        </span>
+        <span className="postTitle">Post Title</span>
         <hr />
-        <span className="postDate">1 hour ago</span>
       </div>
       <p className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-        fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-        atque, exercitationem quibusdam, reiciendis odio laboriosam?
+       Lorem Ipsum
       </p>
     </div>
   );

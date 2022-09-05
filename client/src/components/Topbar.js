@@ -1,4 +1,4 @@
-import "../App.css";
+import "./Topbar.css";
 
 import { Link } from "react-router-dom";
 
@@ -7,14 +7,13 @@ function Topbar() {
   const user = true;
   return (
     <div className="topbar">
-
       <div className="topCenter">
         <ul className="topList">
             <li className="topListItem">
               <Link className="link" to="/">Home</Link>
             </li>
-            <li className="topListItem">About</li>
-            <li className="topListItem">Contact</li>
+            <li className="topListItem"> <Link className="link" to="/about">About</Link>
+            </li>
             <li className="topListItem">
               <Link className="link" to="/add-post">Add Post</Link>
             </li>

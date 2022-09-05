@@ -1,0 +1,2 @@
+.topbar {background: black; color:white; padding:0.5rem; display: flex; flex-direction: row;}
+li {padding:0.2rem; list-style-type:none; justify-content: center; display: flex;display: inline;}

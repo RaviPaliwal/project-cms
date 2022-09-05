@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Settings from "./pages/Settings";
@@ -23,6 +24,7 @@ export default function App () {
           <Routes>
             <Route index element={<Home/>}/>
             <Route path="posts" element= {<Home />} />
+            <Route path="about" element= {<About />} />
             <Route path="register" element= {<Register />}/>
             <Route path="login" element= {<Login />}/>
             <Route path="post/:id" element = {<SinglePost />}/>
