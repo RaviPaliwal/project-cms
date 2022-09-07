@@ -1,7 +1,5 @@
 import "./Topbar.css";
-
 import { Link } from "react-router-dom";
-
 
 function Topbar() {
   const user = true;

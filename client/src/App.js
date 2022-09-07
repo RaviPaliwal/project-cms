@@ -10,26 +10,22 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Settings from "./pages/Settings";
-import SinglePost from "./pages/SinglePost";
+import Single from "./pages/Single";
 import NewPost from "./pages/NewPost";
 
-
-
 export default function App () {
-    const currentUser = true;
     return (
           <>
           <Topbar/>
           <Header />
           <Routes>
             <Route index element={<Home/>}/>
-            <Route path="posts" element= {<Home />} />
-            <Route path="about" element= {<About />} />
-            <Route path="register" element= {<Register />}/>
-            <Route path="login" element= {<Login />}/>
-            <Route path="post/:id" element = {<SinglePost />}/>
+            <Route path="/about" element= {<About />} />
+            <Route path="/register" element= {<Register />}/>
+            <Route path="/login" element= {<Login />}/>
+            <Route path="/:id" element = {<Single />}/>
             <Route path="/add-post" element = {<NewPost />}/>
-            <Route path="settings" element= {<Settings />}/>
+            <Route path="/settings" element= {<Settings />}/>
          </Routes>
          <Footer/>
          </>     

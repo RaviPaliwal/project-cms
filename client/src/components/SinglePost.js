@@ -1,21 +1,34 @@
-import { Link } from "react-router-dom";
-
-//CSS
+import axios from "axios";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "../App.css";
 
-//Components
-
 export default function SinglePost() {
+  const location = useLocation();
+  const path = location.pathname.split("/")[1];
+
+  console.log(path);
+
+  useEffect(() => {
+    const getPost = async () => {
+        const res = await axios.get('/posts/' + path);
+        console.log(res)
+    };
+    getPost()
+  }, [path]);
+
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
+        {/* {post.photo &&  ( */}
         <img
           className="singlePostImg"
           src=""
           alt=""
         />
+        
         <h1 className="singlePostTitle">
-          Lorem ipsum dolor
+          {/* {post.title} */}
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
@@ -25,30 +38,12 @@ export default function SinglePost() {
           <span>
             Author:
             <b className="singlePostAuthor">
-              <Link className="link" to="/post/:id">
-                Post Author
-              </Link>
+              {/* {post.username} */}
             </b>
           </span>
-          <span>1 day ago</span>
         </div>
         <p className="singlePostDesc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error
-          quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit!
-          Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi
-          eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
-          error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto
-          impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a
-          odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos!
+          {/* {post.desc} */}
         </p>
       </div>
     </div>

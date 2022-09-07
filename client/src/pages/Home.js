@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
 import Posts from "../components/Posts";
 import Sidebar from "../components/Sidebar";
 import "../App.css";
@@ -17,13 +16,11 @@ export default function Home() {
     }
     fetchPosts();
   },[])
-  
+
       return (
-        <>
             <div className="home">
                 <Posts posts ={posts}/>
                 <Sidebar />
             </div>
-        </>
       );
     }

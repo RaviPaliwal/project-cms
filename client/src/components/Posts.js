@@ -1,15 +1,14 @@
 import Post from "./Post";
-import "../App.css";
+import '../App.css';
 
-export default function Posts() {
+function Posts({posts}) {
   return (
     <div className="posts">
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+      {posts.map((p) => (
+        <Post post={p}/>
+      ))}
     </div>
   );
 }
+
+export default Posts;
