@@ -1,17 +1,17 @@
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import "../App.css";
 
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
-
-  console.log(path);
+  const [post,setPost] = useState({})
 
   useEffect(() => {
     const getPost = async () => {
         const res = await axios.get('/posts/' + path);
+        setPost(res.data);
         console.log(res)
     };
     getPost()
@@ -20,15 +20,16 @@ export default function SinglePost() {
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        {/* {post.photo &&  ( */}
+        {post.photo &&  (
         <img
           className="singlePostImg"
           src=""
           alt=""
-        />
+        />)
+        }
         
         <h1 className="singlePostTitle">
-          {/* {post.title} */}
+          {post.title}
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
@@ -38,12 +39,19 @@ export default function SinglePost() {
           <span>
             Author:
             <b className="singlePostAuthor">
-              {/* {post.username} */}
+              {post.username}
+            </b>
+          </span>
+
+          <span>
+            Date:
+            <b className="singlePostDate">
+              {new Date(post.createdAt).toDateString()}
             </b>
           </span>
         </div>
         <p className="singlePostDesc">
-          {/* {post.desc} */}
+          {post.desc}
         </p>
       </div>
     </div>

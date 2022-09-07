@@ -1,7 +1,7 @@
 import Post from "./Post";
 import '../App.css';
 
-function Posts({posts}) {
+export default function Posts({posts}) {
   return (
     <div className="posts">
       {posts.map((p) => (
@@ -10,5 +10,3 @@ function Posts({posts}) {
     </div>
   );
 }
-
-export default Posts;
