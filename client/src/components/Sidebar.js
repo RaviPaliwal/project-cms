@@ -32,9 +32,11 @@ export default function Sidebar() {
         <span className="sidebarTitle">Categories</span>
         <ul className="sidebarList">
           {cats.map((c)=>(
+            <Link to={`/?cat=${c.name}`} classname='link'>
             <li className="sidebarListItem">
               {c.name}
-          </li>
+            </li>
+            </Link>
           ))}
           
         </ul>
