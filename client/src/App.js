@@ -14,6 +14,7 @@ import Single from "./pages/Single";
 import NewPost from "./pages/NewPost";
 
 export default function App () {
+    const user = false;
     return (
           <>
           <Topbar/>

@@ -56,4 +56,4 @@ export default function Register() {
         {error && <span>Something went wrong!</span> }
     </div>
     )
-};
+}
