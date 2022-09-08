@@ -19,3 +19,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.loginButton {
+  background-color: blue;
+  color: white;
+}
+
+.loginButton:disabled {
+  cursor:not-allowed;
+  border-color: red;
+}

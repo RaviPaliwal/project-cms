@@ -7,14 +7,14 @@ import { useRef } from "react";
 export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
-  const {user,dispatch,isFetching} = useContext(Context);
+  const {dispatch,isFetching} = useContext(Context);
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({type:'LOGIN_START'});
     try {
-      const res = axios.post('/auth/login',{
+      const res = await axios.post('/auth/login',{
         username: userRef.current.value,
         password: passwordRef.current.value,
       });
@@ -42,7 +42,7 @@ export default function Login() {
         placeholder="Enter your password..." 
         ref={passwordRef}
         />
-        <button className="loginButton" type="submit">Login</button>
+        <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
       </form>
         <button className="loginRegisterButton">Register</button>
     </div>

@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Topbar from "./components/Topbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
@@ -12,9 +11,10 @@ import Register from "./pages/Register";
 import Settings from "./pages/Settings";
 import Single from "./pages/Single";
 import NewPost from "./pages/NewPost";
+import { Context } from "./context/Context";
 
 export default function App () {
-    const user = false;
+    const { user } = useContext(Context);
     return (
           <>
           <Topbar/>
