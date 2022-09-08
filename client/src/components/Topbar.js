@@ -4,7 +4,12 @@ import { Context } from "../context/Context";
 import React, { useContext } from "react";
 
 function Topbar() {
-  const { user } = useContext(Context);
+  const { user,dispatch } = useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({type:'LOGOUT'});
+  };
+  
   return (
     <div className="topbar">
       <div className="topCenter">
@@ -17,7 +22,7 @@ function Topbar() {
             <li className="topListItem">
               <Link className="link" to="/add-post">Add Post</Link>
             </li>
-            {user && <li className="topListItem">Logout</li>}
+            <li className="topListItem" onClick={handleLogout}>{user && 'Logout'}</li>
         </ul>
       </div>
       <div className="topRight">
