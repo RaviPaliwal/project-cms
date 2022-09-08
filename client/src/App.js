@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Context } from "./context/Context";
 
 import Topbar from "./components/Topbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Settings from "./pages/Settings";
 import Single from "./pages/Single";
-import NewPost from "./pages/NewPost";
-import { Context } from "./context/Context";
+import AddPost from "./pages/AddPost";
+import Login from "./pages/Login";
 
 export default function App () {
     const { user } = useContext(Context);
@@ -25,7 +25,7 @@ export default function App () {
             <Route path="/register" element= {<Register />}/>
             <Route path="/login" element= {<Login />}/>
             <Route path="/:id" element = {<Single />}/>
-            <Route path="/add-post" element = {<NewPost />}/>
+            <Route path="/add-post" element = {<AddPost />}/>
             <Route path="/settings" element= {<Settings />}/>
          </Routes>
          <Footer/>

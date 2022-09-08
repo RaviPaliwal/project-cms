@@ -22,18 +22,17 @@ function Topbar() {
             <li className="topListItem">
               <Link className="link" to="/add-post">Add Post</Link>
             </li>
-            <li className="topListItem" onClick={handleLogout}>{user && 'Logout'}</li>
+            <li className="topListItem" onClick={handleLogout}>
+              {user && 'Logout'}</li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <Link className="link" to="/settings">
             <img
               className="topImg"
-              src=""
+              src={user.profilePic}
               alt=""
-            />
-          </Link>
+            /> 
         ) : (
           <ul className="topList">
             <li className="topListItem">
